@@ -49,16 +49,31 @@ OBJ = $(SRC:.c=.o)
 
 CFLAGS = -Wall -Werror -Wextra
 
+SRC_BONUS = ft_lstadd_back_bonus.c\
+		ft_lstadd_front_bonus.c\
+		ft_lstlast_bonus.c\
+		ft_lstnew_bonus.c\
+		ft_lstsize_bonus.c
+
 NAME = libft.a
+
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 all: $(NAME)
 	@echo libft.a was successfully made
 
-$(NAME): $(OBJ)
-	ar -r $(NAME) $(OBJ)
-	
+$(NAME):
+	gcc $(CFLAGS) -c $(SRC)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
+
+bonus:
+	gcc $(CFLAGS) -c $(SRC_BONUS)
+	ar rc $(NAME) $(OBJ_BONUS)
+	ranlib $(NAME)
+
 clean:
 	rm -f $(OBJ)
 fclean:	clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(OBJ_BONUS)
 re: fclean all
