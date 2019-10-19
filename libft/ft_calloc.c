@@ -11,15 +11,20 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void *s;
+	int				*s;
+	unsigned int	i;
 
 	s = malloc(size * count);
 	if (s == NULL)
 		return (NULL);
-	ft_bzero(s, count * size);
-	return (s);
+	i = 0;
+	while (i < count)
+	{
+		s[i] = 0;
+		i++;
+	}
+	return ((void *)s);
 }

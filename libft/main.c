@@ -17,9 +17,15 @@
 
 int main ()
 {
-	const char s[209] = "9999999";
-	printf("%d\n",atoi(s));
-	printf("%d\n",ft_atoi(s));
-	//printf("%d",s);
+	
+	/*void *d1 = calloc((9223372036854775807L *2UL+1UL), sizeof(char));
+	void *d2 = calloc(2, 1073741829);
+	void *d3 = calloc(1, (9223372036854775807L *2UL+1UL));*/
+
+	void *d1 = ft_calloc((9223372036854775807L *2UL+1UL), sizeof(char));
+	void *d2 = ft_calloc(2, 1073741829);
+	void *d3 = ft_calloc(1, (9223372036854775807L *2UL+1UL));
+	printf("%s", d1);
+	printf("%s", d2);
 	return 0;
 }

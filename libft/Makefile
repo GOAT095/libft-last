@@ -55,11 +55,8 @@ all: $(NAME)
 	@echo libft.a was successfully made
 
 $(NAME): $(OBJ)
-	ar -rc	$(NAME) $(OBJ)
-
-.c.o:
-	gcc $(CFLAGS) -c $< -o $@
-
+	ar -r $(NAME) $(OBJ)
+	
 clean:
 	rm -f $(OBJ)
 fclean:	clean
