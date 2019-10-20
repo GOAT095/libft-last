@@ -17,15 +17,15 @@
 
 int main ()
 {
-	
-	/*void *d1 = calloc((9223372036854775807L *2UL+1UL), sizeof(char));
-	void *d2 = calloc(2, 1073741829);
-	void *d3 = calloc(1, (9223372036854775807L *2UL+1UL));*/
-
-	void *d1 = ft_calloc((9223372036854775807L *2UL+1UL), sizeof(char));
-	void *d2 = ft_calloc(2, 1073741829);
-	void *d3 = ft_calloc(1, (9223372036854775807L *2UL+1UL));
-	printf("%s", d1);
-	printf("%s", d2);
+	//char **x;
+	//int i = 0;
+	/*x = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ');
+	while(x[i])
+    {
+        printf("%s\n",x[i]);
+        i++;
+    }*/
+	printf("%d", ft_strncmp("test", "tEst", 4));
+	printf("%d", strncmp("test", "tEst", 4));
 	return 0;
 }
