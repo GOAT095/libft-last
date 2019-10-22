@@ -31,7 +31,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else
 	{
-		while (n - 1 >= i && (s || d))
+		while (n - 1 >= i && (s || d) && n != 0)
 		{
 			d[i] = s[i];
 			i++;

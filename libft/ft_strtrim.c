@@ -27,6 +27,8 @@ static	int	find_left(char const *s1, char const *set)
 		}
 		i++;
 	}
+	if (found1 == -1)
+		return (0);
 	return (found1);
 }
 
@@ -45,6 +47,8 @@ static	int	find_right(char const *s1, char const *set, int found1)
 		}
 		len--;
 	}
+	if (found1 == -1)
+		return (0);
 	return (found2);
 }
 

@@ -22,7 +22,7 @@ static int	ft_count_string(char *s, char c)
 	while (1)
 	{
 		if ((s[i] == c && i != 0 && s[i - 1] != c)
-			|| (s[i] == '\0' && s[i - 1] != c))
+			|| (s[i] == '\0' && i > 0 && s[i - 1] != c))
 			w++;
 		if (s[i] == '\0')
 			break ;
@@ -48,8 +48,8 @@ char		**ft_split(char const *s, char c)
 	j = 0;
 	while (2)
 	{
-		if ((s[i] == c && s[i - 1] != c && i != 0)
-			|| (s[i] == '\0' && s[i - 1] != c))
+		if ((s[i] == c && i != 0 && s[i - 1] != c)
+			|| (s[i] == '\0' && i > 0 && s[i - 1] != c))
 			str[j++] = ft_substr((char *)s, d, i - d);
 		if (s[i] == c)
 			d = i + 1;

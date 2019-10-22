@@ -17,15 +17,19 @@
 
 int main ()
 {
-	//char **x;
-	//int i = 0;
+	/*char **x;
+	int i = 0;*/
 	/*x = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ');
 	while(x[i])
     {
         printf("%s\n",x[i]);
         i++;
     }*/
-	printf("%d", ft_strncmp("test", "tEst", 4));
-	printf("%d", strncmp("test", "tEst", 4));
+	//printf("%d\n", ft_strncmp("test", "tEst", 4));
+	//printf("%d", strncmp("test", "tEst", 4));
+	//printf("%d",ft_atoi("0"));
+
+	char *dest;
+	printf("%s\n",ft_strtrim("       ", " "));
 	return 0;
 }
