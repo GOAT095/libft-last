@@ -60,6 +60,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	int		size;
 	char	*str;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
 	found1 = find_left(s1, set);
 	found2 = find_right(s1, set, found1);

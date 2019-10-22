@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anassif <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/17 23:33:30 by anassif           #+#    #+#             */
-/*   Updated: 2019/10/17 23:33:32 by anassif          ###   ########.fr       */
+/*   Created: 2019/10/17 23:06:52 by anassif           #+#    #+#             */
+/*   Updated: 2019/10/17 23:06:54 by anassif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void *)
+void ft_lstadd_back(t_list **alst, t_list *new)
 {
-	
+	t_list *cn;
+
+	if (!*alst)
+	{
+		*alst = new;
+		return ;
+	}
+	cn = *alst;
+	while (cn->next != NULL)
+		cn = cn->next;
+	cn->next = new;
 }

@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
-#include <stdlib.h>
 
 int main ()
 {
@@ -28,8 +25,13 @@ int main ()
 	//printf("%d\n", ft_strncmp("test", "tEst", 4));
 	//printf("%d", strncmp("test", "tEst", 4));
 	//printf("%d",ft_atoi("0"));
-
-	char *dest;
-	printf("%s\n",ft_strtrim("       ", " "));
+	/*	char *str;
+		char *pouet = "z\0";
+		char *lolzer = (char *)&pouet[2];
+		lolzer = "aaaaaaaaaa";
+		str = ft_memchr(pouet, 'a', 50);
+		printf("%s", str);*/
+	printf("%s\n",ft_strnstr(NULL,"hhrth", 0));
+	//printf("%s",strnstr(NULL,"hhrth", 0));
 	return 0;
 }
